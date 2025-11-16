@@ -1,0 +1,36 @@
+tasks:
+  - name: Setup Environment
+    init: |
+      python -m venv venv
+      source venv/bin/activate
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      playwright install chromium firefox
+    command: |
+      source venv/bin/activate
+      echo ""
+      echo "==========================================="
+      echo "Playwright 101 Certification Environment"
+      echo "==========================================="
+      echo ""
+      echo "Setup your LambdaTest credentials:"
+      echo "export LT_USERNAME=your_username"
+      echo "export LT_ACCESS_KEY=your_access_key"
+      echo ""
+      echo "Or create a .env file with:"
+      echo "LT_USERNAME=your_username"
+      echo "LT_ACCESS_KEY=your_access_key"
+      echo ""
+      echo "Run tests with:"
+      echo "  python run_parallel_tests.py"
+      echo ""
+      echo "Or run individual scenarios:"
+      echo "  pytest tests/test_scenario1.py -v"
+      echo "  pytest tests/test_scenario2.py -v"
+      echo "  pytest tests/test_scenario3.py -v"
+      echo ""
+
+vscode:
+  extensions:
+    - ms-python.python
+    - ms-playwright.playwright
