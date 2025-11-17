@@ -6,21 +6,13 @@ class TestScenario2:
     """Test Scenario 2 - Drag & Drop Sliders"""
     
     def test_drag_drop_slider(self, page: Page):
-        """
-        Test Steps:
-        1. Open Selenium Playground and click "Drag & Drop Sliders"
-        2. Select slider with "Default value 15"
-        3. Drag slider to value 95
-        4. Validate range value shows 95
-        """
-        
         # Step 1: Open Selenium Playground and click "Drag & Drop Sliders"
         page.goto('https://www.lambdatest.com/selenium-playground', timeout=60000)
         page.wait_for_load_state('domcontentloaded')
         page.click('text=Drag & Drop Sliders')
         
         page.wait_for_url('**/drag-drop-range-sliders-demo**', timeout=10000)
-        
+
         # Step 2: Select slider with "Default value 15" using XPath locator
         slider = page.locator("//input[@value='15']")
         
@@ -42,12 +34,11 @@ class TestScenario2:
         # page.mouse.move(target_x, target_y, steps=10)
         # page.mouse.up()
         
-        # # Alternative approach: Use fill method (more reliable)
+        
         slider.fill('95')
         
-        # # Step 3: Validate the range value shows 95 using CSS selector
         
-        # # Step 3: Validate slider value shows 95
+        # Step 3: Validate slider value shows 95
         range_locator = page.locator('#rangeSuccess')
         expect(range_locator).to_have_text('95')
 

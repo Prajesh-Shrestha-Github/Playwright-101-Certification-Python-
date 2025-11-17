@@ -117,8 +117,8 @@ pytest -m scenario3 -v
 ```
 
 ## Gitpod Setup
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/https://github.com/Prajesh-Shrestha-Github/Playwright-101-Certification-Python-.git)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#<your-repo-url>)
 
 ### Steps:
 1. Click the Gitpod button above
